@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   iconsax: ^0.0.8
   badges: ^2.0.3
+  curved_navigation_bar: ^1.0.3
+  get: ^4.6.5
+
   google_fonts:
 dev_dependencies:
   flutter_test:
