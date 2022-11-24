@@ -50,7 +50,7 @@ class Hompage extends StatelessWidget {
                           child: Transform.rotate(
 
                               angle: 13.3,
-                              child: Image.asset("assets/bg2.png"))))
+                              child: Image.asset("assets/bg1.png"))))
                 ],
               ),
             ),
