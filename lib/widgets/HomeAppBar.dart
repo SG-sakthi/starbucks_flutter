@@ -1,4 +1,5 @@
 import 'package:badges/badges.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:flutter/material.dart';
 class HomeAppBar extends StatelessWidget {
@@ -7,15 +8,30 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.white,
-      padding: EdgeInsets.all(25),
+      color: Color(0xff007E3F),
+      padding: EdgeInsets.symmetric(
+        horizontal: 20 ,
+        vertical: 17,
+      ),
+
       child:Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children:[
-          Icon(
-          Icons.sort,
-          size:30,
-          color:Colors.green,
+          Container(
+              height: 25,
+              width: 25,
+              child: Image.asset("assets/logo2.png")
           ),
+      SizedBox(
+        width: 10,
+      ),
+      Text("Starbucks",
+        style: GoogleFonts.openSans(
+           fontSize: 22,
+          fontWeight: FontWeight.w700,
+          letterSpacing: 2,
+          color: Color(0xffFFFFFF),
+        ),),
           Spacer(),
           Badge(
             badgeColor:Colors.red,
@@ -27,11 +43,13 @@ class HomeAppBar extends StatelessWidget {
               ),
             ),
             child: InkWell(
-              onTap:(){},
+              onTap:(){
+                Navigator.pushNamed(context, "cofees");
+              },
               child:Icon(
                 Iconsax.bag_2,
                 size: 30,
-                color:Colors.green,
+                color:Color(0xffFFFFFF),
               ),
             ),
           ),
