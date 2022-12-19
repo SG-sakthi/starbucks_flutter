@@ -1,77 +1,29 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:star/controller/navbar_controller.dart';
-import 'package:star/pages/Itempage.dart';
-import 'package:star/widgets/HomeAppBar.dart';
+import 'package:star/pages/item_page.dart';
+import 'package:star/widgets/home_app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:star/widgets/navigation_bar.dart';
 
-import 'Cofees.dart';
-
-GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
 int page = 100;
-final _navbar = Get.put(NavBar());
+final _navbar = Get.put(NavBarCtrl());
 
-class Hompage extends StatelessWidget {
-  const Hompage({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AnnotatedRegion(value: const SystemUiOverlayStyle(
-      statusBarIconBrightness: Brightness.light,
-      statusBarColor: Color(0xff007E3F),
-    ),
+    return AnnotatedRegion(
+      value: const SystemUiOverlayStyle(
+        statusBarIconBrightness: Brightness.light,
+        statusBarColor: Color(0xff007E3F),
+      ),
       child: SafeArea(
         child: Scaffold(
-          bottomNavigationBar: CurvedNavigationBar(
-            color: Color(0xff007E3F),
-            backgroundColor: const Color(0xffFFFFFF),
-            buttonBackgroundColor: Color(0xff007E3F),
-            key: _bottomNavigationKey,
-            index: 2,
-
-            items: [
-              GestureDetector(
-                child: Icon(
-                  Iconsax.user,
-                  color: Colors.white,
-                ),
-                onTap: () {
-                  Get.to(()=> const Cofees(),
-                    transition: Transition.noTransition,
-                    duration: const Duration(milliseconds: 0)
-                  );
-                },
-               ),
-              GestureDetector(
-                child: Icon(
-                  Iconsax.coffee,
-                  color: Colors.white,
-                ),
-                onTap: () {
-                  Get.to(()=> const Cofees(),
-                      transition: Transition.noTransition,
-                      duration: const Duration(milliseconds: 0)
-                  );
-                },
-              ),
-              Icon(
-                Iconsax.home_25,
-                color: Colors.white,
-              ),
-              Icon(
-                Iconsax.call,
-                color: Colors.white,
-              ),
-              Icon(
-                Iconsax.shopping_cart,
-                color: Colors.white,
-              )
-            ],
-          ),
+          bottomNavigationBar: NavBar(),
           body: SingleChildScrollView(
             physics: const NeverScrollableScrollPhysics(),
             child: Stack(
@@ -88,7 +40,7 @@ class Hompage extends StatelessWidget {
                   child: Stack(
                     children: [
                       Container(
-                  width:300 ,
+                        width: 300,
                         child: Padding(
                           padding: const EdgeInsets.symmetric(
                               horizontal: 18.0, vertical: 30),
@@ -103,7 +55,7 @@ class Hompage extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                          top: -30 ,
+                          top: -30,
                           left: 140,
                           child: Container(
                               width: 380,
@@ -145,9 +97,23 @@ class Hompage extends StatelessWidget {
                               height: 300,
                               child: Column(
                                 children: [
-                                  Container(
-                                      height: 300,
-                                      child: Image.asset(_navbar.pics[index])),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Get.to(
+                                          () => ItemPage(
+                                                image: _navbar.pics[index],
+                                                coffeeName:
+                                                    _navbar.heading[index],
+                                              ),
+                                          transition: Transition.noTransition,
+                                          duration:
+                                              const Duration(milliseconds: 0));
+                                    },
+                                    child: Container(
+                                        height: 300,
+                                        child:
+                                            Image.asset(_navbar.pics[index])),
+                                  ),
                                   SizedBox(
                                     height: 0,
                                   ),
@@ -178,23 +144,16 @@ class Hompage extends StatelessWidget {
                           options: CarouselOptions(
                             aspectRatio: 9 / 16,
                             autoPlay: true,
-                            autoPlayInterval: Duration(seconds:3),
+                            autoPlayInterval: Duration(seconds: 3),
                             enlargeCenterPage: true,
                             scrollPhysics: BouncingScrollPhysics(),
-
                           )),
                     ),
-                    onTap: () {
-                      Get.to(()=> const ItemPage(),
-                          transition: Transition.noTransition,
-                          duration: const Duration(milliseconds: 0)
-                      );
-                    },
+                    onTap: () {},
                   ),
                 ),
               ],
             ),
-
           ),
         ),
       ),

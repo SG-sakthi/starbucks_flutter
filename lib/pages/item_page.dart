@@ -1,11 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:star/widgets/ItemAppBar.dart';
+import 'package:star/widgets/item_app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 
 class ItemPage extends StatelessWidget {
-  const ItemPage({Key? key}) : super(key: key);
+  final String? image;
+  final String? coffeeName;
+
+  ItemPage({Key? key, this.image, this.coffeeName}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +38,7 @@ class ItemPage extends StatelessWidget {
                         child: Container(
                             width: 360,
                             height: 360,
-                            child: Image.asset("assets/carousel3.png"))),
+                            child: Image.asset(image!))),
                     Positioned(
                         top: 240,
                         child: Container(
@@ -47,14 +50,12 @@ class ItemPage extends StatelessWidget {
                         left: 10,
                         child: Row(
                           children: [
-                            Container(
-                              child: Text(
-                                "Americano. Caffè Lattino.",
-                                style: GoogleFonts.poppins(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w600,
-                                  color: const Color(0xffFFFFFF),
-                                ),
+                            Text(
+                              coffeeName!,
+                              style: GoogleFonts.poppins(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: const Color(0xffFFFFFF),
                               ),
                             ),
                             SizedBox(
@@ -62,7 +63,7 @@ class ItemPage extends StatelessWidget {
                             ),
                             Container(
                               height: 30,
-                              child: Icon(
+                              child: const Icon(
                                 Iconsax.heart5,
                                 size: 30,
                                 color: Color(0xffFF3939),

@@ -28,8 +28,10 @@ environment:
 
 dependencies:
   glassmorphism: ^3.0.0
+  flutter_animated_button: ^2.0.2
   flutter:
     sdk: flutter
+
 
 
 
