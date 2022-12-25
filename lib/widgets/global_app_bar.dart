@@ -42,7 +42,7 @@ class CoffeesAppBar extends StatelessWidget {
               ),
               child: InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, "Itempage");
+                  Navigator.pushNamed(context, "buypage");
                 },
                 child: const Icon(
                   Iconsax.bag_2,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:star/controller/navbar_controller.dart';
-import 'package:star/pages/item_page.dart';
+import 'package:star/pages/items_page.dart';
 import 'package:star/widgets/home_app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
                                   GestureDetector(
                                     onTap: () {
                                       Get.to(
-                                          () => ItemPage(
+                                          () => ItemPages(
                                                 image: _navbar.pics[index],
                                                 coffeeName:
                                                     _navbar.heading[index],

@@ -11,6 +11,7 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return CurvedNavigationBar(
       color: const Color(0xff007E3F),
       backgroundColor: const Color(0xffFFFFFF),

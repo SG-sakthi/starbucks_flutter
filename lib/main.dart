@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:star/pages/buy_page.dart';
 import 'package:star/pages/cart_page.dart';
 import 'package:star/pages/home_page.dart';
-import 'package:star/pages/item_page.dart';
 import 'package:get/get.dart';
+import 'package:star/pages/items_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,8 +24,9 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/": (context) => HomePage(),
-        "itemPage": (context) => ItemPage(),
+        "itemPage": (context) => ItemPages(),
         "cofees": (context) => CartPage(),
+        "buypage":(context) => Buypage(),
       },
     );
   }

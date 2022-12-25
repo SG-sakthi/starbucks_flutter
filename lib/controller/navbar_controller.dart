@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:meta/meta.dart';
 
 class NavBarCtrl extends GetxController {
   var navBarColor = true.obs;
@@ -9,6 +8,8 @@ class NavBarCtrl extends GetxController {
     "assets/carousel2.png",
     "assets/carousel3.png"
   ];
+
+  var fav = false.obs;
 
   List heading = [" Americano. Caffè Lattino.", "Cappacuino", "Espresso"];
   List desc = [
