@@ -4,13 +4,10 @@ import 'package:star/widgets/global_app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:get/get.dart';
-import 'package:star/controller/navbar_controller.dart';
 import 'package:star/widgets/card_widget.dart';
 
 GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
-int page = 100;
-final _navbar = Get.put(NavBarCtrl());
+
 
 class CartPage extends StatelessWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -19,52 +16,7 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            bottomNavigationBar: CurvedNavigationBar(
-              color: const Color(0xff007E3F),
-              backgroundColor: Colors.white,
-              buttonBackgroundColor: const Color(0xff007E3F),
-              key: _bottomNavigationKey,
-              index: 1,
-              items: [
-                GestureDetector(
-                  child: const Icon(
-                    Iconsax.user,
-                    color: Colors.white,
-                  ),
-                  //   onTap: () {
-                  //     Get.to(()=> const Cofees(),
-                  //       transition: Transition.noTransition,
-                  //       duration: const Duration(milliseconds: 0)
-                  //     );
-                  //   },
-                ),
-                GestureDetector(
-                    child: const Icon(
-                      Iconsax.coffee,
-                      color: Colors.white,
-                    ),
-                    onTap: () {}),
-                GestureDetector(
-                  child: const Icon(
-                    Iconsax.home_25,
-                    color: Colors.white,
-                  ),
-                  onTap: () {
-                    Get.to(() => const HomePage(),
-                        transition: Transition.noTransition,
-                        duration: const Duration(milliseconds: 0));
-                  },
-                ),
-                const Icon(
-                  Iconsax.call,
-                  color: Colors.white,
-                ),
-                const Icon(
-                  Iconsax.shopping_cart,
-                  color: Colors.white,
-                )
-              ],
-            ),
+
             backgroundColor: Colors.white,
             body: Column(
               children: [

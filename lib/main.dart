@@ -6,26 +6,28 @@ import 'package:star/pages/cart_page.dart';
 import 'package:star/pages/home_page.dart';
 import 'package:get/get.dart';
 import 'package:star/pages/items_page.dart';
+import 'package:star/widgets/navigation_bar.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      systemNavigationBarColor: Colors.transparent,
-      systemNavigationBarDividerColor:Colors.transparent
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Color(0xff007E3F),
+      systemNavigationBarColor: Color(0xff007E3F),
+      systemNavigationBarDividerColor:Color(0xff007E3F),
     ));
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner:false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
       ),
+      home:NavBar(),
       routes: {
-        "/": (context) => HomePage(),
+        "home": (context) => HomePage(),
         "itemPage": (context) => ItemPages(),
-        "cofees": (context) => CartPage(),
+        "cofees": (context) => const CartPage(),
         "buypage":(context) => Buypage(),
       },
     );

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:star/controller/navbar_controller.dart';
+import 'package:star/controller/images_controller.dart';
 import 'package:star/pages/items_page.dart';
 import 'package:star/widgets/home_app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:star/widgets/navigation_bar.dart';
 
-int page = 100;
-final _navbar = Get.put(NavBarCtrl());
+final _navbar = Get.put(ImagesController());
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -23,7 +22,6 @@ class HomePage extends StatelessWidget {
       ),
       child: SafeArea(
         child: Scaffold(
-          bottomNavigationBar: NavBar(),
           body: SingleChildScrollView(
             physics: const NeverScrollableScrollPhysics(),
             child: Stack(
@@ -104,6 +102,7 @@ class HomePage extends StatelessWidget {
                                                 image: _navbar.pics[index],
                                                 coffeeName:
                                                     _navbar.heading[index],
+                                            price: _navbar.price[index],
                                               ),
                                           transition: Transition.noTransition,
                                           duration:
