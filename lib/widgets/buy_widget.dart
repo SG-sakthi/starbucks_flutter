@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
+
 import '../controller/images_controller.dart';
 
 class BuyWidget extends StatelessWidget {
@@ -33,7 +34,8 @@ class BuyWidget extends StatelessWidget {
                     right: Radius.circular(0), left: Radius.circular(14)),
               ),
               child: Image.asset(image!),
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10)),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 10, vertical: 10)),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             width: 210,
@@ -81,7 +83,6 @@ class BuyWidget extends StatelessWidget {
                             color: const Color(0xff007E3F),
                           ),
                           child: InkWell(
-
                             child: const Icon(
                               Iconsax.add,
                               size: 20,
@@ -93,8 +94,9 @@ class BuyWidget extends StatelessWidget {
                         width: 10,
                       ),
                       Container(
-                        alignment: Alignment.center,
-                          width:17,child: Obx(() => Text(_ctrl.item.toString()))),
+                          alignment: Alignment.center,
+                          width: 17,
+                          child: Obx(() => Text(_ctrl.item.toString()))),
                       const SizedBox(
                         width: 10,
                       ),
@@ -105,9 +107,8 @@ class BuyWidget extends StatelessWidget {
                             borderRadius: BorderRadius.circular(5),
                             color: const Color(0xff007E3F),
                           ),
-                          child:InkWell(
-
-                           child: const Icon(
+                          child: InkWell(
+                            child: const Icon(
                               Iconsax.minus,
                               size: 20,
                               color: Colors.white,
@@ -120,15 +121,6 @@ class BuyWidget extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(
-            width: 20,
-            height: 20,
-            child: Icon(
-              Iconsax.trash4,
-              size: 20,
-              color: Colors.green,
-            ),
-          )
         ],
       ),
     );
