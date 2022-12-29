@@ -51,7 +51,7 @@ class ItemPages extends StatelessWidget {
                       child: Stack(
                         children: [
                           SizedBox(
-                              width: MediaQuery.of(context).size.width,
+                              width:MediaQuery.of(context).size.width,
                               height: 202,
                               child: Image.asset("assets/Frame.png")),
                           Container(

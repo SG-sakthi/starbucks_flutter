@@ -47,5 +47,14 @@ var len  = 0;
     "112.0",
     "112.0",
   ];
+  List info = [
+    "A cappuccino is the perfect balance of espresso, steamed milk and ....",
+    " This coffee is all about the structure and the even splitting of all element...",
+    "A cappuccino is the perfect balance of  structure and the even element...",
+    "A cappuccino is the perfect balance of all element...",
+    "A cappuccino is the  structure and the even splitting of all element.",
+    "A  coffee is all about the structure and the even splitting of all element.",
+    "A about the structure and the even splitting of all element.",
+  ];
 
 }

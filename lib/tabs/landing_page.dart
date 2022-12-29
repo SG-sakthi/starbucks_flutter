@@ -1,7 +1,7 @@
-import 'package:star/pages/buy_page.dart';
 import 'package:star/pages/cart_page.dart';
 import 'package:star/pages/home_page.dart';
-import 'package:star/pages/items_page.dart';
+import 'package:star/pages/profile_page.dart';
+import 'package:star/pages/support_page.dart';
 
 final List<Map<String, dynamic>> pageDetails = [
   {
@@ -13,12 +13,12 @@ final List<Map<String, dynamic>> pageDetails = [
     'title': 'cart',
   },
   {
-    'pageName': ItemPages(),
-    'title': 'item',
+    'pageName': Profile(),
+    'title': 'profile',
   },
   {
-    'pageName': Buypage(),
-    'title': 'buy',
+    'pageName':SupportPage(),
+    'title': 'support',
 
   },
 ];

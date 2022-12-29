@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       statusBarColor: Color(0xff007E3F),
       systemNavigationBarColor: Color(0xff007E3F),
       systemNavigationBarDividerColor:Color(0xff007E3F),
+
     ));
     return GetMaterialApp(
       debugShowCheckedModeBanner:false,
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "home": (context) => HomePage(),
         "itemPage": (context) => ItemPages(),
-        "cofees": (context) => const CartPage(),
+        "cofees": (context) => CartPage(),
         "buypage":(context) => Buypage(),
       },
     );
