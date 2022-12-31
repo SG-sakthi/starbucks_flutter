@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:get/get.dart';
-import 'package:star/controller/images_controller.dart';
-import 'package:star/widgets/item_app_bar.dart';
+import 'package:starbucks/controller/images_controller.dart';
+import 'package:starbucks/widgets/item_app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -45,7 +45,8 @@ class ItemPages extends StatelessWidget {
                             padding: const EdgeInsets.only(bottom: 20),
                             width: 360,
                             height: 280,
-                            child: Image.asset(image!))),
+                            child: Hero(tag: image!,
+                            child: Image.asset(image!)))),
                     Positioned(
                       top: 125,
                       child: Stack(

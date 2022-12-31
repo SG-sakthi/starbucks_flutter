@@ -1,7 +1,7 @@
-import 'package:star/pages/cart_page.dart';
-import 'package:star/pages/home_page.dart';
-import 'package:star/pages/profile_page.dart';
-import 'package:star/pages/support_page.dart';
+import 'package:starbucks/pages/cart_page.dart';
+import 'package:starbucks/pages/home_page.dart';
+import 'package:starbucks/pages/profile_page.dart';
+import 'package:starbucks/pages/support_page.dart';
 
 final List<Map<String, dynamic>> pageDetails = [
   {

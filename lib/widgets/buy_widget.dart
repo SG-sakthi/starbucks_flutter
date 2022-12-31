@@ -37,7 +37,7 @@ class BuyWidget extends StatelessWidget {
                   const EdgeInsets.symmetric(horizontal: 10, vertical: 10)),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            width: 210,
+            width: 190,
             height: 100,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -120,13 +120,23 @@ class BuyWidget extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            width: 20,
-            height: 20,
-            child: Icon(
-              Iconsax.trash4,
-              size: 20,
-              color: Colors.green,
+          Container(
+            alignment: Alignment.center,
+            padding: EdgeInsets.symmetric(vertical: 25),
+            child: Column(
+              children: [
+                Text("swipe to",
+                style: GoogleFonts.poppins(
+                 fontSize: 14,
+                 fontWeight: FontWeight.normal,
+                 color: Colors.grey
+                ),),
+                Icon(
+                  Iconsax.trash4,
+                  size: 20,
+                  color: Colors.green,
+                ),
+              ],
             ),
           ),
 

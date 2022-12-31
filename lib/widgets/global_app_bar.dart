@@ -28,7 +28,7 @@ class CoffeesAppBar extends StatelessWidget {
               prefixIcon: const Icon(
                 Iconsax.search_favorite_14,
                 color: Color(0xff007E3F),
-              ),
+              ), onSubmitted: (String ) {  },
             ),
             const Spacer(),
             Badge(

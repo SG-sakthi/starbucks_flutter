@@ -33,7 +33,8 @@ class CardWidget extends StatelessWidget {
               padding: const EdgeInsets.all(7.7),
               height: 150,
               width: 140,
-              child: Image.asset(image!),
+              child: Hero(tag: image!,
+              child: Image.asset(image!)),
             ),
             Container(
               margin: const EdgeInsets.only(left: 140, top: 20),

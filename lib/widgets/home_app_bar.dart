@@ -1,7 +1,9 @@
 import 'package:badges/badges.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:flutter/material.dart';
+import 'package:starbucks/pages/buy_page.dart';
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({Key? key}) : super(key: key);
 
@@ -44,7 +46,7 @@ class HomeAppBar extends StatelessWidget {
             ),
             child: InkWell(
               onTap:(){
-                Navigator.pushNamed(context, "cofees");
+                Get.to(Buypage());
               },
               child:Icon(
                 Iconsax.bag_2,

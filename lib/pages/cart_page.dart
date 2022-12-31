@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:star/controller/images_controller.dart';
-import 'package:star/pages/home_page.dart';
-import 'package:star/widgets/global_app_bar.dart';
+import 'package:starbucks/controller/images_controller.dart';
+import 'package:starbucks/widgets/global_app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:star/widgets/card_widget.dart';
+import 'package:starbucks/widgets/card_widget.dart';
 
 import 'items_page.dart';
 
@@ -65,7 +63,7 @@ class CartPage extends StatelessWidget {
                                             ),
                                             transition: Transition.downToUp,
                                             duration:
-                                            const Duration(milliseconds: 1000));
+                                            const Duration(milliseconds: 500));
                                       },
                                       child: CardWidget(
                                         coffeeName: _ctrl.heading[index],

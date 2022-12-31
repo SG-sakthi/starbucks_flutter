@@ -1,4 +1,4 @@
-name: star
+name: starbucks
 description: A new Flutter project.
 
 
@@ -30,6 +30,9 @@ dependencies:
   glassmorphism: ^3.0.0
   flutter_animated_button: ^2.0.2
   water_drop_nav_bar: ^2.2.0+5
+  flutter_launcher_icons: ^0.11.0
+
+
   flutter:
     sdk: flutter
 
@@ -56,6 +59,10 @@ dev_dependencies:
 
 
   flutter_lints: ^1.0.0
+flutter_icons:
+    android: "launcher_icon"
+    ios: true
+    image_path: "icon/iconlogo.png"
 
 
 
