@@ -1,16 +1,25 @@
-# star
 
-A new Flutter project.
+![Logo](https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/100px-Starbucks_Corporation_Logo_2011.svg.png)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# StarBucks
 
-A few resources to get you started if this is your first Flutter project:
+Here's the new recreated design for the StarBucks app with cool animation ana User Experience  
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Screenshots
+
+![App Screenshot](https://github.com/SG-sakthi/starbucks_flutter/blob/main/assets/Screenshots/photo_1_2023-01-01_09-03-12.jpg)
+![App Screenshot](https://github.com/SG-sakthi/starbucks_flutter/blob/main/assets/Screenshots/photo_2_2023-01-01_09-03-12.jpg)
+![App Screenshot](https://github.com/SG-sakthi/starbucks_flutter/blob/main/assets/Screenshots/photo_3_2023-01-01_09-03-12.jpg)
+![App Screenshot](https://github.com/SG-sakthi/starbucks_flutter/blob/main/assets/Screenshots/photo_4_2023-01-01_09-03-12.jpg)
+![App Screenshot](https://github.com/SG-sakthi/starbucks_flutter/blob/main/assets/Screenshots/photo_5_2023-01-01_09-03-12.jpg)
+
+
+## Authors
+
+- [Sakthi](https://www.github.com/SG-sakthi)
+- [Sanj](https://www.github.com/hermes-maker)
+
+
