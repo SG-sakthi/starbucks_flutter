@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:get/get.dart';
-import 'package:starbucks/controller/images_controller.dart';
-import 'package:starbucks/widgets/item_app_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:starbucks/controller/images_controller.dart';
+import 'package:starbucks/widgets/item_app_bar.dart';
 
 class ItemPages extends StatelessWidget {
   final _ctrl = Get.put(ImagesController());
   final String? image;
   final String? coffeeName;
   final String? price;
-  ItemPages({Key? key, this.image, this.coffeeName, this.price}) : super(key: key);
+  ItemPages({Key? key, this.image, this.coffeeName, this.price})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +25,7 @@ class ItemPages extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const ItemAppBar(),
-                  Stack
-                    (children: [
+                  Stack(children: [
                     Column(
                       children: [
                         Container(
@@ -45,14 +45,14 @@ class ItemPages extends StatelessWidget {
                             padding: const EdgeInsets.only(bottom: 20),
                             width: 360,
                             height: 280,
-                            child: Hero(tag: image!,
-                            child: Image.asset(image!)))),
+                            child:
+                                Hero(tag: image!, child: Image.asset(image!)))),
                     Positioned(
                       top: 125,
                       child: Stack(
                         children: [
                           SizedBox(
-                              width:MediaQuery.of(context).size.width,
+                              width: MediaQuery.of(context).size.width,
                               height: 202,
                               child: Image.asset("assets/Frame.png")),
                           Container(
@@ -60,14 +60,13 @@ class ItemPages extends StatelessWidget {
                             padding: const EdgeInsets.symmetric(horizontal: 10),
                             width: MediaQuery.of(context).size.width,
                             height: 130,
-
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
                                   children: [
                                     SizedBox(
-                                      width:320,
+                                      width: 320,
                                       child: Text(
                                         coffeeName!,
                                         style: GoogleFonts.poppins(
@@ -77,7 +76,7 @@ class ItemPages extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                   SizedBox(
+                                    SizedBox(
                                       height: 40,
                                       child: IconButton(
                                         onPressed: () {
@@ -98,7 +97,8 @@ class ItemPages extends StatelessWidget {
                                   ],
                                 ),
                                 Container(
-                                  margin: const EdgeInsets.symmetric(horizontal: 8),
+                                  margin:
+                                      const EdgeInsets.symmetric(horizontal: 8),
                                   child: Text(
                                     "With soy milk",
                                     style: GoogleFonts.poppins(
@@ -109,8 +109,8 @@ class ItemPages extends StatelessWidget {
                                   ),
                                 ),
                                 Container(
-                                    margin:
-                                        const EdgeInsets.symmetric(horizontal: 8),
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 8),
                                     width: MediaQuery.of(context).size.width,
                                     height: 45,
                                     child: Row(
@@ -118,8 +118,7 @@ class ItemPages extends StatelessWidget {
                                         SizedBox(
                                           height: 37,
                                           width: 37,
-                                          child:
-                                              Image.asset("assets/milk.png"),
+                                          child: Image.asset("assets/milk.png"),
                                         ),
                                         const SizedBox(
                                           width: 18,
@@ -135,13 +134,13 @@ class ItemPages extends StatelessWidget {
                                         SizedBox(
                                             height: 37,
                                             width: 37,
-                                            child: Image.asset(
-                                                "assets/bean.png")),
+                                            child:
+                                                Image.asset("assets/bean.png")),
                                       ],
                                     )),
                                 Container(
-                                    margin:
-                                        const EdgeInsets.symmetric(horizontal: 14),
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 14),
                                     width: MediaQuery.of(context).size.width,
                                     height: 18,
                                     child: Row(
@@ -219,10 +218,11 @@ class ItemPages extends StatelessWidget {
                             child: Row(
                               children: [
                                 SizedBox(
-
                                   height: 55,
                                   width: 55,
-                                  child: Image.asset("assets/small.png",),
+                                  child: Image.asset(
+                                    "assets/small.png",
+                                  ),
                                 ),
                                 const SizedBox(
                                   width: 18,
@@ -248,7 +248,6 @@ class ItemPages extends StatelessWidget {
                               ],
                             )),
                         Container(
-
                             margin: const EdgeInsets.only(left: 50, top: 5),
                             height: 20,
                             child: Row(
@@ -313,10 +312,9 @@ class ItemPages extends StatelessWidget {
                               ],
                             )),
                         Container(
-
-
-                          margin: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
-                          child:Text(
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 5),
+                          child: Text(
                             "Description",
                             style: GoogleFonts.poppins(
                               fontSize: 16,
@@ -331,7 +329,8 @@ class ItemPages extends StatelessWidget {
                               physics: const BouncingScrollPhysics(),
                               children: [
                                 Container(
-                                  margin: const EdgeInsets.symmetric(horizontal: 25),
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 25),
                                   child: Text(
                                     "A cappuccino is the perfect balance of espresso, steamed milk and foam. This coffee is all about the structure and the even splitting of all elementcappuccino is the perfect balance of espresso, steamed milk and foam.A cappuccino is the perfect balance of espresso, steamed milk and foam. This coffee is all about the structure and the even splitting of all elementcappuccino is the perfect balance of espresso, steamed milk and foam.A cappuccino is the perfect balance of espresso, steamed milk and foam. This coffee is all about the structure and the even splitting of all elementcappuccino is the perfect balance of espresso, steamed milk and foam.A cappuccino is the perfect balance of espresso, steamed milk and foam. This coffee is all about the structure and the even splitting of all elementcappuccino is the perfect balance of espresso, steamed milk and foam.A cappuccino is the perfect balance of espresso, steamed milk and foam. This coffee is all about the structure and the even splitting of all elementcappuccino is the perfect balance of espresso, steamed milk and foam.A cappuccino is the perfect balance of espresso, steamed milk and foam. This coffee is all about the structure and the even splitting of all elementcappuccino is the perfect balance of espresso, steamed milk and foam.A cappuccino is the perfect balance of espresso, steamed milk and foam. This coffee is all about the structure and the even splitting of all elementcappuccino is the perfect balance of espresso, steamed milk and foam. ",
                                     textAlign: TextAlign.justify,
@@ -354,20 +353,18 @@ class ItemPages extends StatelessWidget {
                           child: Row(
                             children: [
                               Column(
-                                crossAxisAlignment : CrossAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Container(
-                                    child: Text(
-                                      " Price",
-                                      style: GoogleFonts.poppins(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w400,
-                                        color: const Color(0xff007E3F),
-                                      ),
+                                  Text(
+                                    " Price",
+                                    style: GoogleFonts.poppins(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w400,
+                                      color: const Color(0xff007E3F),
                                     ),
                                   ),
                                   Text(
-                                   "\$$price",
+                                    "\$$price",
                                     style: GoogleFonts.poppins(
                                       fontSize: 17,
                                       fontWeight: FontWeight.w600,
@@ -392,17 +389,16 @@ class ItemPages extends StatelessWidget {
                                     color: Colors.white,
                                     fontWeight: FontWeight.w500),
                                 backgroundColor: const Color(0xff007E3F),
-                                selectedBackgroundColor:
-                                    Colors.orange.shade400,
+                                selectedBackgroundColor: Colors.orange.shade400,
                                 borderRadius: 7,
                                 borderWidth: 2,
                                 animatedOn: AnimatedOn.onTap,
-                                animationDuration: const Duration(milliseconds: 100),
+                                animationDuration:
+                                    const Duration(milliseconds: 100),
                                 onPress: () {
                                   Navigator.pushNamed(context, "cofees");
                                 },
                               ),
-
                             ],
                           ),
                         )
