@@ -1,11 +1,11 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:starbucks/controller/images_controller.dart';
 import 'package:starbucks/pages/items_page.dart';
 import 'package:starbucks/widgets/home_app_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
 final _navbar = Get.put(ImagesController());
 
@@ -59,7 +59,9 @@ class HomePage extends StatelessWidget {
                               height: 380,
                               child: Transform.rotate(
                                   angle: -120,
-                                  child: Image.asset("assets/shadow.png")))),
+                                  child: Image(
+                                    image: AssetImage("assets/shadow.PNG"),
+                                  )))),
                       Positioned(
                           top: -30,
                           left: 160,
@@ -101,17 +103,18 @@ class HomePage extends StatelessWidget {
                                                 image: _navbar.pics[index],
                                                 coffeeName:
                                                     _navbar.heading[index],
-                                            price: _navbar.price[index],
+                                                price: _navbar.price[index],
                                               ),
                                           transition: Transition.noTransition,
-                                          duration:
-                                              const Duration(milliseconds: 500));
+                                          duration: const Duration(
+                                              milliseconds: 500));
                                     },
                                     child: Container(
                                         height: 300,
-                                        child:
-                                            Hero(tag:_navbar.pics[index],
-                                            child: Image.asset(_navbar.pics[index]))),
+                                        child: Hero(
+                                            tag: _navbar.pics[index],
+                                            child: Image.asset(
+                                                _navbar.pics[index]))),
                                   ),
                                   SizedBox(
                                     height: 0,
