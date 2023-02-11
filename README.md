@@ -22,6 +22,6 @@ Here's the new recreated design for the StarBucks app with cool animation ana Us
 ## Authors
 
 - [Sakthi](https://www.github.com/SG-sakthi)
-- [Sanj](https://www.github.com/iam-sanj)
+
 
 
